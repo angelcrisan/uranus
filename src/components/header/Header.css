@@ -1,0 +1,51 @@
+
+.header-container{
+    margin: 10px;
+    border-bottom: 1px solid darkred;
+    display: flex;
+}
+
+
+.Burger-Button{
+    height: 25px;
+    margin: 13px;
+    padding-left: 30px;
+}
+
+.Menu-container{
+    font-family: cursive;
+    font-size: 15px;
+    font-weight: bold;
+    display: flex;
+}
+
+.Simple-Search{
+    display: flex;
+    padding-left: 200px;
+    padding-bottom: 10px;
+    margin: 10px ;
+    
+}
+
+.Search-icon{
+    height: 20px;
+}
+
+.Search-Input{
+    margin-left: 15px;
+    width: 250px;
+    border-radius: 8px;
+}
+
+.Register-container{
+    padding-left: 480px;
+    margin: 10px;
+}
+
+.Register-Button{
+    border: none;
+    background: none;
+    font-family: cursive;
+    font-weight: bold;
+}
+

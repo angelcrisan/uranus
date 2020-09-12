@@ -1,0 +1,23 @@
+.Content-Homepage-Container{
+    display: flex;
+    flex-direction: column;
+}
+
+.Best-Rated-Movies{
+    display: flex;
+}
+
+.Best-Rated-Text{
+    margin-left: 70px;
+    margin-top: 25px;
+    font-size: 20px;
+    font-family: cursive;
+    font-weight: bold;
+}
+
+.Stars-Image{
+    height: 50px;
+    margin-left: 10px;
+    margin-top: 10px;
+}
+

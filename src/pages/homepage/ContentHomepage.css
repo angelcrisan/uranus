@@ -1,6 +1,7 @@
 .Content-Homepage-Container{
     display: flex;
     flex-direction: column;
+    height: calc(100%-190px);
 }
 
 .Best-Rated-Movies{
@@ -21,3 +22,11 @@
     margin-top: 10px;
 }
 
+.Cards-Container{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 100%;
+    border: 2px solid black;
+    margin: auto;
+}

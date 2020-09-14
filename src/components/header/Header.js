@@ -3,7 +3,7 @@ import { AppLogo } from './AppLogo';
 import "./Header.css";
 import burgerButton from "../../burger-button.svg" 
 import search from "../../search.svg";
-import { CustomDropDown } from './Dropdown'; 
+// import { CustomDropDown } from './Dropdown'; 
 
 
 export class Header extends React.Component {

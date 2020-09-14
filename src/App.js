@@ -2,15 +2,16 @@ import React from 'react';
 
 import './App.css';
 import { Homepage } from './pages/homepage/Homepage';
-import { AllMoviesPage } from './pages/SecondPage/AllMoviesPage';
+// import { AllMoviesPage } from './pages/SecondPage/AllMoviesPage';
 
-function App() {
+export class App extends React.Component {
+ render(){ 
   return (
-    <div>
+    <div className="App">
     <Homepage />
     {/* <AllMoviesPage /> */}
     </div>
   );
 }
+}
 
-export default App;

@@ -1,0 +1,23 @@
+.SocialMediaInfo{
+    display: flex;
+    font-family: cursive;
+    font-size: small;
+    
+}
+
+.Fb-Icon,
+.Insta-Icon,
+.Twitter-Icon{
+    width: 20px;
+    padding-left: 10px;
+}
+
+.Follow-Text{
+    margin: 40px;
+}
+
+.Contact-Text{
+    margin-left: auto;
+    padding-right: 40px;
+}
+

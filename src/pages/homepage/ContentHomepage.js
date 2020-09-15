@@ -55,6 +55,7 @@ return (
                 <img src={stars} alt="stars" className="Stars-Image"></img>
             </div>
             <div className="Cards-Container" onClick={this.handleCards}>
+                <p className="click">Click me</p>
                 {this.state.topRatedMovies.map((element,index)=>(
                     <CardContainer 
                     key={index} 

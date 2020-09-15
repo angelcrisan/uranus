@@ -1,14 +1,39 @@
 .card-Container{
     display: flex;
-    flex-direction: column;
-    width: 200px;
-    height: 200px;
+    flex-direction: row;
+    flex-wrap: wrap;
+    /* width: 100px;
+    height: 100px; */
     margin: 10px;
 }
 
-.card-title{
-    color: cornflowerblue;
+/* .card-Container h4{
+    position: absolute;
+    
+} */
+.card-text{
+    position: absolute;
+    margin-bottom: 20px;
+}
+
+
+.posters img{
+        margin: 0px;
+        margin-left: auto;
+        margin-right: auto;
+        width: 120px;
+      
+}
+
+.card-Container h4{
+    color: gray;
+    font-size: 10px;
 }
 .card-imdbRating{
-    color: blue;
+
+    color: gray;
+}
+
+.posters{
+    margin: 30px;
 }

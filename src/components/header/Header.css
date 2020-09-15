@@ -6,17 +6,64 @@
 }
 
 
-.Burger-Button{
-    height: 25px;
-    margin: 13px;
+.button{
     padding-left: 30px;
+    align-self: center;
 }
 
+.Burger-Button{
+    height: 25px;
+    /* padding-left: 30px; */
+
+}
+
+
+.dropdown{ 
+    width: 35px;
+    height: 35px;
+    border-radius: 3em;
+    border: none;
+    margin: 3px;
+    cursor: pointer;
+}
+
+.Dropdown-content {
+    /* transform: translateX(-200%); */
+    display: none;
+    position: absolute;
+    background-color: #f1f1f1;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+}
+
+  .Dropdown-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    text-align: center;
+  }
+
+
+  .Dropdown-content a:hover {
+    display: flex;
+    background-color: rgb(95, 79, 79);
+    }
+
+
+    .Dropdown:hover{
+        display: inline-block;
+       }
+
+      
+
 .Menu-container{
+    display: flex;
     font-family: cursive;
     font-size: 15px;
     font-weight: bold;
-    display: flex;
+    
 }
 
 .Simple-Search{
@@ -38,8 +85,8 @@
 }
 
 .Register-container{
-    padding-left: 480px;
     margin: 10px;
+    margin-left: auto;
 }
 
 .Register-Button{
@@ -47,5 +94,6 @@
     background: none;
     font-family: cursive;
     font-weight: bold;
+    cursor: pointer;
 }
 

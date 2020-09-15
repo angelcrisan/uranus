@@ -1,5 +1,12 @@
+.footer{
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+}
+
 .SocialMediaInfo{
-    margin-top: auto;
+    /* margin-top: auto; */
     display: flex;
     font-family: cursive;
     font-size: small;

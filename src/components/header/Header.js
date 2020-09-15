@@ -19,7 +19,18 @@ export class Header extends React.Component {
         <div className= "header-container">
         <AppLogo />
         <div className="Menu-container">
-            <img src={burgerButton} alt="Menu" className="Burger-Button"></img>
+           <div className="button">
+                <button className="dropdown"> 
+                <img src={burgerButton} alt="Menu" className="Burger-Button"></img>
+                </button>
+           </div>
+           <div className="Dropdown-content">
+                <a>Homepage</a>
+                <a>Search</a>
+                <a>All movies</a>
+                <a>About us</a>
+            </div>
+            
             <p>Menu</p>
             {/* <CustomDropDown title="Home Page" list={this.state.location} toggleItem = {this.toggleSelected} /> */}
 

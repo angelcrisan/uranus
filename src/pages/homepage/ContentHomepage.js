@@ -19,31 +19,29 @@ getAllMovies = () =>{
         
             // console.log(json.results);
 
-            for (const movie of json.results){
-                //  console.log(movie);
-               if(movie.imdbRating > 8.5){
-                this.state.topRatedMovies.push(movie)
+            // for (const movie of json.results){
+            //    if(movie.imdbRating > 8.5){
+            //     this.state.topRatedMovies.push(movie)
                
-               }  
-             }
+            //    }  
+            //  }
             //  localStorage.setItem("bestRatedMovies", JSON.stringify(topRatedMovies))
             
             //sort array descending by imdb rating
-            this.state.topRatedMovies.sort(function(firstMovie, NextMovie){return NextMovie.imdbRating-firstMovie.imdbRating});
-            this.setState({topRatedMovies: this.state.topRatedMovies})  
+            // this.state.topRatedMovies.sort(function(firstMovie, NextMovie){
+            //     return NextMovie.imdbRating-firstMovie.imdbRating});
+
+            this.setState({topRatedMovies: json.results
+                .filter(movie => movie.imdbRating >8.5)
+                .sort(function(firstMovie, NextMovie){
+                 return NextMovie.imdbRating-firstMovie.imdbRating})})  
              console.log(this.state.topRatedMovies);
         })
         } 
     }
     
-handleCards = () =>{
+componentDidMount() {
     this.getAllMovies()
-    this.setState({
-        ArrayofBestRatedMovies:[
-            this.state.topRatedMovies,...this.state.topRatedMovies,
-        ]
-    })
-
  }   
 
 render (){
@@ -54,8 +52,7 @@ return (
                 <p className="Best-Rated-Text">Best Rated Movies</p>
                 <img src={stars} alt="stars" className="Stars-Image"></img>
             </div>
-            <div className="Cards-Container" onClick={this.handleCards}>
-                <p className="click">Click me</p>
+            <div className="Cards-Container">
                 {this.state.topRatedMovies.map((element,index)=>(
                     <CardContainer 
                     key={index} 

@@ -5,15 +5,28 @@
     font-family: cursive;
 }
 
+.page-content p{
+    padding-right: 140px;
+}
+
 .page-content input{
     border-top: none;
     border-left: none;
     border-right: none;
-    width: 200px;
+    width: 220px;
     background-color: #FEFEDF; ;
 }
 
 .page-content h4{
     color: steelblue;
+    cursor: pointer;
+    padding-left: 80px;
+}
+.log-in-button{
+    font-size: 15px;
+    font-family: cursive;
+    border-radius: 3px;
+    width: 100px;
+    font-weight: bold;
     cursor: pointer;
 }

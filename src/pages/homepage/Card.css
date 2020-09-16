@@ -1,21 +1,12 @@
 .card-Container{
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    /* width: 100px;
-    height: 100px; */
-    margin: 10px;
+    margin: 18px;
+    align-items: center;
 }
 
-/* .card-Container h4{
-    position: absolute;
-    
-} */
 .card-text{
-    position: absolute;
+    position: relative;
     margin-bottom: 20px;
 }
-
 
 .posters img{
         margin: 0px;
@@ -27,10 +18,10 @@
 
 .card-Container h4{
     color: gray;
-    font-size: 10px;
+    font-size: 13px;
 }
-.card-imdbRating{
 
+.card-imdbRating{
     color: gray;
 }
 

@@ -61,6 +61,9 @@ return (
                     imdbRating={element.imdbRating} />  
                 ))}
             </div>
+            <div className="Best-Comedies">
+                    <p className="Best-Comedies-Text">Best Comedies</p>
+            </div>
         </div>
 
     );

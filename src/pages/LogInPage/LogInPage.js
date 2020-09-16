@@ -1,17 +1,17 @@
 import React from 'react';
 import { FooterComponent } from '../../components/footer/FooterInfo';
 import { Header } from '../../components/header/Header';
-import { AddMovie } from '../SecondPage/AllMoviesPageContent';
+import './LogInPage.css';
+import { LogIn } from './LogInPageContent';
 
-
-export function AllMoviesPage () {
-    return(
+export class LogInPage extends React.Component {
+    render(){
+        return(
         <div>
         <Header />
         <FooterComponent />
-        <AddMovie />
+        <LogIn />
         </div>
-    );
+        );
+    }
 }
-
-

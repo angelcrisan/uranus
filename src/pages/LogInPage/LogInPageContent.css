@@ -1,0 +1,19 @@
+
+
+.page-content{
+    margin-top: 100px;
+    font-family: cursive;
+}
+
+.page-content input{
+    border-top: none;
+    border-left: none;
+    border-right: none;
+    width: 200px;
+    background-color: #FEFEDF; ;
+}
+
+.page-content h4{
+    color: steelblue;
+    cursor: pointer;
+}

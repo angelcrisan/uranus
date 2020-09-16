@@ -7,11 +7,7 @@ import { LogIn } from './LogInPageContent';
 export class LogInPage extends React.Component {
     render(){
         return(
-        <div>
-        <Header />
-        <FooterComponent />
         <LogIn />
-        </div>
         );
     }
 }

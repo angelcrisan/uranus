@@ -5,7 +5,8 @@ import stars from "./stars.svg";
 
 export class ContentHomepage extends React.Component {
 state={
-    topRatedMovies: []
+    topRatedMovies: [],
+    bestComedies: []
 }  
 
 getAllMovies = () =>{
@@ -16,26 +17,19 @@ getAllMovies = () =>{
         fetch("https://movies-app-siit.herokuapp.com/movies?take=9999999&skip=0")
         .then((response)=> response.json())
         .then((json)=>{
-        
-            // console.log(json.results);
-
-            // for (const movie of json.results){
-            //    if(movie.imdbRating > 8.5){
-            //     this.state.topRatedMovies.push(movie)
-               
-            //    }  
-            //  }
-            //  localStorage.setItem("bestRatedMovies", JSON.stringify(topRatedMovies))
-            
-            //sort array descending by imdb rating
-            // this.state.topRatedMovies.sort(function(firstMovie, NextMovie){
-            //     return NextMovie.imdbRating-firstMovie.imdbRating});
-
-            this.setState({topRatedMovies: json.results
+        console.log(json.results);
+           
+            this.setState({
+                topRatedMovies: json.results
                 .filter(movie => movie.imdbRating >8.5)
                 .sort(function(firstMovie, NextMovie){
-                 return NextMovie.imdbRating-firstMovie.imdbRating})})  
-             console.log(this.state.topRatedMovies);
+                 return NextMovie.imdbRating-firstMovie.imdbRating}),
+                 bestComedies: json.results
+                 .filter(movie => movie.imdbRating > 7.4 && movie.Genre.includes("Comedy"))
+                 .sort(function(firstMovie, NextMovie){
+                    return NextMovie.imdbRating-firstMovie.imdbRating})
+                })  
+             console.log(this.state.bestComedies);
         })
         } 
     }
@@ -64,7 +58,16 @@ return (
             <div className="Best-Comedies">
                     <p className="Best-Comedies-Text">Best Comedies</p>
             </div>
-        </div>
+            <div className="Cards-Container">
+                {this.state.bestComedies.map((element,index)=>(
+                    <CardContainer 
+                    key={index} 
+                    Title={element.Title} 
+                    Poster={element.Poster} 
+                    imdbRating={element.imdbRating} />  
+                ))}
+            </div><br></br>
+        </div> 
 
     );
 

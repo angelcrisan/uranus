@@ -6,11 +6,7 @@ import { AddMovie } from '../SecondPage/AllMoviesPageContent';
 
 export function AllMoviesPage () {
     return(
-        <div>
-        <Header />
-        <FooterComponent />
         <AddMovie />
-        </div>
     );
 }
 

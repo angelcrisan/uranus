@@ -12,6 +12,7 @@ export class LogIn extends React.Component{
                 <p>Password:</p>
                 <input></input>
                 <h4>Not a member yet?</h4>
+                <button className="log-in-button">Log In</button>
             </div>
         )
     }

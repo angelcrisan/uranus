@@ -7,9 +7,9 @@ import { FooterComponent } from '../../components/footer/FooterInfo';
 export function Homepage(){
     return (
         <div className="Home-Page">
-        <Header />
+
         <ContentHomepage />
-        <FooterComponent />
+      
         </div>
     )
 

@@ -3,17 +3,12 @@ import { AppLogo } from './AppLogo';
 import "./Header.css";
 import burgerButton from "../../burger-button.svg" 
 import search from "../../search.svg";
+import { Link } from 'react-router-dom';
 // import { CustomDropDown } from './Dropdown'; 
 
 
 export class Header extends React.Component {
-    toggleSelected(id, key){
-        let temp = this.state[key]
-        temp[id].selected = !temp[id].selected
-        this.setState({
-          [key]: temp
-        })
-      }
+   
     render(){
     return (
         <div className= "header-container">
@@ -25,9 +20,13 @@ export class Header extends React.Component {
                 </button>
            </div>
            <div className="Dropdown-content">
+               <Link to="/">
                 <a>Homepage</a>
+                </Link>
                 <a>Search</a>
-                <a>All movies</a>
+                <Link to="/all-movies-page">
+                    <a>All movies</a>
+                </Link>
                 <a>About us</a>
             </div>
             
@@ -40,7 +39,9 @@ export class Header extends React.Component {
             <input className="Search-Input"></input>
         </div>
         <div className="Register-container">
-            <button className="Register-Button">Register/Sign In</button>
+            <Link to="/login">
+                <button className="Register-Button">Register/Sign In</button>
+            </Link>
         </div>
         </div>
     )

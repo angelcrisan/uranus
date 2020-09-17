@@ -1,0 +1,17 @@
+body,
+html{
+    height: 100%;
+    width: 100%;
+    background: #FEFEDF;
+}
+
+.content{
+    font-family: cursive;
+    align-self: center;
+    margin: 70px;
+}
+
+.content p{
+    margin-left: 90px;
+    margin-right: 90px;
+}

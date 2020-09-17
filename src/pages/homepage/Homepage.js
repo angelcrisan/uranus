@@ -1,8 +1,8 @@
 import React from 'react';
-import { Header } from "../../components/header/Header"
+// import { Header } from "../../components/header/Header"
 import './Homepage.css';
 import { ContentHomepage } from './ContentHomepage';
-import { FooterComponent } from '../../components/footer/FooterInfo';
+// import { FooterComponent } from '../../components/footer/FooterInfo';
 
 export function Homepage(){
     return (

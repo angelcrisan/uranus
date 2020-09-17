@@ -27,7 +27,9 @@ export class Header extends React.Component {
                 <Link to="/all-movies-page">
                     <a>All movies</a>
                 </Link>
+                <Link to="/about-us-page">
                 <a>About us</a>
+                </Link>
             </div>
             
             <p>Menu</p>

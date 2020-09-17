@@ -13,6 +13,7 @@ import { AllMoviesPage } from './pages/SecondPage/AllMoviesPage';
 import { Header } from './components/header/Header';
 import { FooterComponent } from './components/footer/FooterInfo';
 import { AboutUsInfo } from './pages/AboutUsPage/AboutUs';
+import { RegisterPage } from './pages/RegisterPage/RegisterPage';
 
 
 export class App extends React.Component {
@@ -33,6 +34,9 @@ export class App extends React.Component {
         </Route>
         <Route path="/about-us-page">
           <AboutUsInfo />
+        </Route>
+        <Route path="/Register-Page-Content">
+          <RegisterPage />
         </Route>
       </Switch>
       <FooterComponent />

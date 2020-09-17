@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import './LogInPageContent.css';
 
 
@@ -10,8 +11,12 @@ export class LogIn extends React.Component{
                 <p>Username:</p>
                 <input></input>
                 <p>Password:</p>
-                <input></input>
-                <h4>Not a member yet?</h4>
+                <input className="last-input"></input>
+                <br></br>
+            <div className="linkToRegister">
+                <Link to="/Register-Page-Content"><a>Not a member yet?</a></Link>
+            </div>
+            <br></br>
                 <button className="log-in-button">Log In</button>
             </div>
         )

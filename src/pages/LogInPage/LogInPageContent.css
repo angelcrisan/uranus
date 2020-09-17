@@ -28,3 +28,11 @@
     font-weight: bold;
     cursor: pointer;
 }
+.last-input{
+    margin-bottom: 20px;
+}
+
+.linkToRegister a{
+    text-decoration: none;
+    
+}

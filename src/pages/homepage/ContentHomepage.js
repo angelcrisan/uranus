@@ -6,7 +6,8 @@ import stars from "./stars.svg";
 export class ContentHomepage extends React.Component {
 state={
     topRatedMovies: [],
-    bestComedies: []
+    bestComedies: [],
+    bestDramas: []
 }  
 
 getAllMovies = () =>{
@@ -27,7 +28,12 @@ getAllMovies = () =>{
                  bestComedies: json.results
                  .filter(movie => movie.imdbRating > 7.4 && movie.Genre.includes("Comedy"))
                  .sort(function(firstMovie, NextMovie){
+                    return NextMovie.imdbRating-firstMovie.imdbRating}),
+                bestDramas: json.results
+                 .filter(movie => movie.imdbRating > 8.0 && movie.Genre.includes("Drama"))
+                 .sort(function(firstMovie, NextMovie){
                     return NextMovie.imdbRating-firstMovie.imdbRating})
+                   
                 })  
              console.log(this.state.bestComedies);
         })
@@ -66,7 +72,21 @@ return (
                     Poster={element.Poster} 
                     imdbRating={element.imdbRating} />  
                 ))}
-            </div><br></br>
+            </div>
+            <div className="Best-Dramas">
+                    <p className="Best-Dramas-Text">Best Dramas</p>
+            </div>
+            <div className="Cards-Container">
+                {this.state.bestDramas.map((element,index)=>(
+                    <CardContainer 
+                    key={index} 
+                    Title={element.Title} 
+                    Poster={element.Poster} 
+                    imdbRating={element.imdbRating} />  
+                ))}
+            </div>
+            
+            <br></br>
         </div> 
 
     );

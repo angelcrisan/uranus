@@ -39,5 +39,17 @@
     
 }
 
+.Best-Dramas-Text{
+    float: left;
+    padding-left: 70px;
+    font-size: 20px;
+    font-family: cursive;
+    font-weight: bold;
+}
+
+.Content-Homepage-Container:last-child {
+    margin-bottom: 50px;
+}
+
 
 

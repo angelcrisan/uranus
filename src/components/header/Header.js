@@ -21,14 +21,14 @@ export class Header extends React.Component {
            </div>
            <div className="Dropdown-content">
                <Link to="/">
-                <a>Homepage</a>
+                   <p>Homepage</p>
                 </Link>
-                <a>Search</a>
+                <p>Search</p>
                 <Link to="/all-movies-page">
-                    <a>All movies</a>
+                    <p>All movies</p>
                 </Link>
                 <Link to="/about-us-page">
-                <a>About us</a>
+                    <p>About us</p>
                 </Link>
             </div>
             

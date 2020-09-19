@@ -12,8 +12,8 @@ state={
 
 getAllMovies = () =>{
  
-    if (false){//localStorage.getItem("bestRatedMovies")) {
-           // this.setState({Movies: JSON.parse(localStorage.getItem("bestRatedMovies"))}) 
+    if (localStorage.getItem("bestRatedMovies")) {
+        this.setState({topRatedMovies: JSON.parse(localStorage.getItem("bestRatedMovies"))}) 
     } else{
         fetch("https://movies-app-siit.herokuapp.com/movies?take=9999999&skip=0")
         .then((response)=> response.json())

@@ -13,12 +13,15 @@ state={
 getAllMovies = () =>{
  
     if (localStorage.getItem("bestRatedMovies")) {
-        this.setState({topRatedMovies: JSON.parse(localStorage.getItem("bestRatedMovies"))}) 
+        this.setState({
+            topRatedMovies: JSON.parse(localStorage.getItem("bestRatedMovies")),
+            bestComedies: JSON.parse(localStorage.getItem("bestComedies")),
+            bestDramas: JSON.parse(localStorage.getItem("bestDramas"))
+    }) 
     } else{
         fetch("https://movies-app-siit.herokuapp.com/movies?take=9999999&skip=0")
         .then((response)=> response.json())
         .then((json)=>{
-        console.log(json.results);
            
             this.setState({
                 topRatedMovies: json.results
@@ -35,7 +38,10 @@ getAllMovies = () =>{
                     return NextMovie.imdbRating-firstMovie.imdbRating})
                    
                 })  
-             console.log(this.state.bestComedies);
+            
+             localStorage.setItem("bestRatedMovies", JSON.stringify(this.state.topRatedMovies))
+             localStorage.setItem("bestComedies", JSON.stringify(this.state.bestComedies))
+             localStorage.setItem("bestDramas", JSON.stringify(this.state.bestDramas))
         })
         } 
     }

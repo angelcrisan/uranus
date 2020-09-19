@@ -4,11 +4,41 @@ import "./Header.css";
 import burgerButton from "../../burger-button.svg" 
 import search from "../../search.svg";
 import { Link } from 'react-router-dom';
-// import { CustomDropDown } from './Dropdown'; 
-
 
 export class Header extends React.Component {
    
+checkIfLoggedIn =() => {
+        if (localStorage.getItem("accessToken")) {
+            return(
+                <button className="Register-Button" onClick={this.handleLogOut}>Log Out</button>
+            )
+        } else {
+           return(
+            <Link to="/login">
+                <button className="Register-Button">Register/Sign In</button>
+            </Link>
+            )
+        }
+    }
+
+   handleLogOut =() =>{
+        fetch("https://movies-app-siit.herokuapp.com/auth/logout", {
+      method: "GET",
+      headers: {
+        "X-Auth-Token": localStorage.getItem("accessToken"),
+      },
+    })
+      .then((res) => res.json())
+      .then((json) => {
+        localStorage.removeItem("accessToken")
+      }).catch(json => {
+          if (json.message === "User logged out successfully" ) {
+              //refresh page or something :)
+          }else {
+              alert("Something bad happen when trying to Log you out, please retry!")
+          }
+      });
+   } 
     render(){
     return (
         <div className= "header-container">
@@ -33,7 +63,6 @@ export class Header extends React.Component {
             </div>
             
             <p>Menu</p>
-            {/* <CustomDropDown title="Home Page" list={this.state.location} toggleItem = {this.toggleSelected} /> */}
 
         </div>
         <div className="Simple-Search">
@@ -41,9 +70,7 @@ export class Header extends React.Component {
             <input className="Search-Input"></input>
         </div>
         <div className="Register-container">
-            <Link to="/login">
-                <button className="Register-Button">Register/Sign In</button>
-            </Link>
+           {this.checkIfLoggedIn()}
         </div>
         </div>
     )

@@ -40,45 +40,6 @@ export class RegisterPage extends React.Component{
           });
       }
     }
-    
-    //   render(){    
-    //   return (
-    //             <div className="CreateAccountBody" >
-    //                 <img src={PopSuc} alt="popsuc" className="pop-suc"></img>
-    //                 <div className="Inputs-Container">
-    //                 <InputBar 
-    //                   label="UserName" 
-    //                   type="text" 
-    //                   placeholder="Type your username" 
-    //                   value={this.state.value}
-    //                   onChangeValue={this.handleChangeUsername}
-    //                   />
-    //                 <InputBar 
-    //                   label="Password" 
-    //                   type="password" 
-    //                   placeholder="Type your password"
-    //                   value={this.state.value}
-    //                   onChangeValue={this.handleChangePassword} 
-    //                   />
-    //                 <InputBar 
-    //                   label="Retype Password" 
-    //                   type="password" 
-    //                   placeholder="Please retype your password"
-    //                   value={this.state.value}
-    //                   onChangeValue={this.handleChangeRetypePassword} 
-    //                   />
-    //                 <div className="buttons-container">  
-    //                     <Button 
-    //                       className="create-account-button" 
-    //                       label="Create Account"
-    //                       onSubmit={this.handleCreateAccount}  
-    //                       />                    
-    //                 </div>
-    //               </div>   
-    //             </div>
-    //         );
-    //   }
-   
    
     render(){
         return(

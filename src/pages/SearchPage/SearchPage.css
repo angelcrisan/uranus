@@ -1,0 +1,11 @@
+body,
+html{
+    height: 100%;
+    width: 100%;
+    background: #FEFEDF;
+}
+h3 {
+    position: absolute;
+    margin-left: 100px;
+    margin-top: 50px;
+}

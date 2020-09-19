@@ -53,7 +53,9 @@ checkIfLoggedIn =() => {
                <Link to="/">
                    <p>Homepage</p>
                 </Link>
+                <Link to="/search-page">
                 <p>Search</p>
+                </Link>
                 <Link to="/all-movies-page">
                     <p>All movies</p>
                 </Link>

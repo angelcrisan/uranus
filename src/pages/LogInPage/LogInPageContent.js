@@ -14,7 +14,9 @@ export class LogIn extends React.Component{
                 <input className="last-input"></input>
                 <br></br>
             <div className="linkToRegister">
-                <Link to="/Register-Page-Content"><a>Not a member yet?</a></Link>
+                <Link to="/Register-Page-Content">
+                    <p>Not a member yet?</p>
+                </Link>
             </div>
             <br></br>
                 <button className="log-in-button">Log In</button>

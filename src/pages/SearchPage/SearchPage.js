@@ -5,8 +5,8 @@ export class SearchPage extends React.Component{
         return(
             <div>
             <h3>Search By:</h3> 
-            <div class="search">
-              <div class="first-rows"> <p>Title:</p> <input type="text"></input> 
+            <div className="search">
+              <div className="first-rows"> <p>Title:</p> <input type="text"></input> 
                <p>Year:</p> <input type="text"></input>
                <p>Genre:</p> <input type="text" ></input>
                <p>Language:</p> <input type="text"></input> 

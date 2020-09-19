@@ -1,0 +1,20 @@
+.all-movies-page{
+    display: flex
+}
+
+.allMovies-container{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+.pagination-container{
+    display: flex;
+    flex-direction: row;
+    margin-bottom: 50px;
+    justify-content: center;
+}
+
+p.pagination-container{
+    margin: 10px;
+}

@@ -24,15 +24,15 @@ getAllMovies = () =>{
         .then((json)=>{
            
             this.setState({
-                topRatedMovies: json.results
+            topRatedMovies: json.results
                 .filter(movie => movie.imdbRating >8.5)
                 .sort(function(firstMovie, NextMovie){
                  return NextMovie.imdbRating-firstMovie.imdbRating}),
-                 bestComedies: json.results
+            bestComedies: json.results
                  .filter(movie => movie.imdbRating > 7.4 && movie.Genre.includes("Comedy"))
                  .sort(function(firstMovie, NextMovie){
                     return NextMovie.imdbRating-firstMovie.imdbRating}),
-                bestDramas: json.results
+            bestDramas: json.results
                  .filter(movie => movie.imdbRating > 8.0 && movie.Genre.includes("Drama"))
                  .sort(function(firstMovie, NextMovie){
                     return NextMovie.imdbRating-firstMovie.imdbRating})

@@ -3,13 +3,13 @@ import "./Card.css"
 
 export function CardContainer (props) {
    return(
-      <div className="card-Container" >
-        <div className="card-text">
-        <h4 className="card-title">{props.Title}</h4> 
-        <p className="card-imdbRating">{props.imdbRating}</p>
+      <div className={props.containerClass} >
+        <div className={props.textContainerClass}>
+        <h4 className={props.cardTitleClass}>{props.Title}</h4> 
+        <p className={props.cardImdbratingClass}>{props.imdbRating}</p>
         </div> 
-        <div className="posters">
-           <img src={props.Poster} alt="poster" className="card-img"></img>
+        <div className={props.posterClass}>
+           <img src={props.Poster} alt="poster" className={props.imgSrcClass}></img>
         </div>
         
       </div>

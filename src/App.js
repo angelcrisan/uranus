@@ -46,9 +46,7 @@ export class App extends React.Component {
         <Route path="/search-page">
           <SearchPage/>
         </Route>
-        <Route path="/movie-details-page">
-          <MovieDetails />
-        </Route>
+        <Route component={MovieDetails} path="/movie-details-page"/>
       </Switch>
       <FooterComponent />
     </Router>

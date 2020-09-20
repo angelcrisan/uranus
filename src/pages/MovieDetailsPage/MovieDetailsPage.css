@@ -1,0 +1,20 @@
+.show{
+    display: block;
+}
+
+.hidden{
+    display: none;
+}
+
+.single-card-container{
+    display: flex;
+}
+
+.single-card-container img{
+    margin-left: 20px;
+    margin-top: 100px;
+}
+
+.movie-information-container{
+    margin:10px;
+}

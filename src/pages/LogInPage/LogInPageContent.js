@@ -40,7 +40,7 @@ export class LogIn extends React.Component{
             return
           } 
         localStorage.setItem("accessToken", json.accessToken);
-        return <Redirect to="/" />                
+        window.location.reload()             
         });
     }
 
@@ -68,7 +68,11 @@ export class LogIn extends React.Component{
                 </Link>
             </div>
             <br></br>
-                <button className="log-in-button" onClick={this.handleLogIn} >Log In</button>
+                <Link to="/">
+                <button className="log-in-button" onClick={this.handleLogIn} >
+                  Log In
+                  </button>
+                  </Link>
             </div>
         )
     }

@@ -1,5 +1,5 @@
 import React from 'react';
-import { CardContainer } from './Card';
+import CardContainer from './Card';
 import './ContentHomepage.css';
 import stars from "./stars.svg";
 
@@ -61,6 +61,7 @@ return (
             <div className="Cards-Container">
                 {this.state.topRatedMovies.map((element,index)=>(
                     <CardContainer
+                    id={element._id}
                     containerClass = "card-Container"
                     textContainerClass ="card-text" 
                     cardTitleClass = "card-title"
@@ -78,7 +79,8 @@ return (
             </div>
             <div className="Cards-Container">
                 {this.state.bestComedies.map((element,index)=>(
-                    <CardContainer 
+                    <CardContainer
+                    id={element._id} 
                     containerClass = "card-Container"
                     textContainerClass ="card-text"
                     cardTitleClass = "card-title"
@@ -96,7 +98,8 @@ return (
             </div>
             <div className="Cards-Container">
                 {this.state.bestDramas.map((element,index)=>(
-                    <CardContainer 
+                    <CardContainer
+                    id={element._id} 
                     containerClass = "card-Container"
                     textContainerClass ="card-text"
                     cardTitleClass = "card-title"

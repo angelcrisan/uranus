@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { CardContainer } from '../homepage/Card';
+import CardContainer from '../homepage/Card';
 import "./AllMoviesPageContent.css";
 
 export class AddMovie extends React.Component {
@@ -79,19 +79,17 @@ componentDidMount() {
     console.log(this.state.allMovies[0]); 
        return (
         <div className="all-movies-page">
-            {/* <Link to="/add-movie-content">
-            <button className="add-button">Add a movie</button>
-            </Link> */}
+            
         <div className="allMovies-container" id="AllMovies-Container">
             {this.state.allMovies.map((element,index)=>(
-            //    <Link to="/"
-               <CardContainer 
+        
+               <CardContainer
+                    id={element._id} 
                     containerClass = "allMovies-card-Container"
                     textContainerClass ="allMovies-card-text"
                     cardTitleClass = "allMovies-card-title"
                     cardImdbratingClass = "allMovies-card-imdbRating"
                     imgSrcClass = "card-img"
-
                     key={index} 
                     Title={element.Title} 
                     Poster={element.Poster} 

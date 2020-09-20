@@ -36,6 +36,7 @@ export class SearchPage extends React.Component {
         fetch(url)
         .then(res => res.json())
         .then(json => this.setState({ movieData: json }));
+    
     }
 
     render() {

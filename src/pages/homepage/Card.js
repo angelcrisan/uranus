@@ -1,19 +1,27 @@
 import React from 'react';
+import { withRouter } from 'react-router-dom';
 import "./Card.css"
 
-export function CardContainer (props) {
+class CardContainer extends React.Component{
+
+   handleOnCLick = () => {
+      this.props.history.push(`/movie-details-page?movieId=${this.props.id}`)
+   }
+  render(){ 
    return(
-      <div className={props.containerClass} >
-        <div className={props.textContainerClass}>
-        <h4 className={props.cardTitleClass}>{props.Title}</h4> 
-        <p className={props.cardImdbratingClass}>{props.imdbRating}</p>
+      <div className={this.props.containerClass} onClick={this.handleOnCLick}>
+        <div className={this.props.textContainerClass}>
+        <h4 className={this.props.cardTitleClass}>{this.props.Title}</h4> 
+        <p className={this.props.cardImdbratingClass}>{this.props.imdbRating}</p>
         </div> 
-        <div className={props.posterClass}>
-           <img src={props.Poster} alt="poster" className={props.imgSrcClass}></img>
+        <div className={this.props.posterClass}>
+           <img src={this.props.Poster} alt="poster" className={this.props.imgSrcClass}></img>
         </div>
         
       </div>
 
    )
-};
+}
+}
 
+export default withRouter(CardContainer);

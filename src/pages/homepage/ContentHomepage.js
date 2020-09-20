@@ -60,7 +60,10 @@ return (
             </div>
             <div className="Cards-Container">
                 {this.state.topRatedMovies.map((element,index)=>(
-                    <CardContainer 
+                    <CardContainer
+                    containerClass = "card-Container"
+                    textContainerClass ="card-text" 
+                    cardTitleClass = "card-title"
                     key={index} 
                     Title={element.Title} 
                     Poster={element.Poster} 
@@ -73,6 +76,10 @@ return (
             <div className="Cards-Container">
                 {this.state.bestComedies.map((element,index)=>(
                     <CardContainer 
+                    containerClass = "card-Container"
+                    textContainerClass ="card-text"
+                    cardTitleClass = "card-title"
+
                     key={index} 
                     Title={element.Title} 
                     Poster={element.Poster} 
@@ -85,6 +92,12 @@ return (
             <div className="Cards-Container">
                 {this.state.bestDramas.map((element,index)=>(
                     <CardContainer 
+                    containerClass = "card-Container"
+                    textContainerClass ="card-text"
+                    cardTitleClass = "card-title"
+                    cardImdbratingClass = "card-imdbRating"
+                    imgSrcClass = "card-img"
+                    posterClass = "posters"
                     key={index} 
                     Title={element.Title} 
                     Poster={element.Poster} 

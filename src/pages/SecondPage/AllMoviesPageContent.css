@@ -6,15 +6,46 @@
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
+    margin-left: 50px;
+    
 }
 
 .pagination-container{
+    position: absolute;
+    margin-top: 700px;
+    margin-bottom: 130px;
     display: flex;
-    flex-direction: row;
-    margin-bottom: 50px;
-    justify-content: center;
+    margin-left: 600px;
 }
 
-p.pagination-container{
-    margin: 10px;
+.prev-text{
+    margin: 15px;
+    cursor: pointer;
 }
+
+.next-text{
+    margin: 15px;
+    cursor: pointer;
+}
+
+.allMovies-card-title,
+.allMovies-card-imdbRating{
+    font-size: 10px;
+}
+
+.card-img{
+    width: 150px;
+    margin: 35px;
+}
+
+.add-button{
+    margin-right: 60px;
+    width: 100px;
+    cursor: pointer;
+    height: 40px;
+    border-radius: 5px;
+    font-family: cursive;
+    background-color: rgb(235, 180, 235);
+}
+
+

@@ -15,6 +15,7 @@ import { AboutUsInfo } from './pages/AboutUsPage/AboutUs';
 import { RegisterPage } from './pages/RegisterPage/RegisterPage';
 import { AddMoviePage } from './pages/AddMoviePage/AddMovie';
 import { SearchPage } from './pages/SearchPage/SearchPage';
+import { MovieDetails } from './pages/MovieDetailsPage/MovieDetailsPage';
 
 
 export class App extends React.Component {
@@ -44,6 +45,9 @@ export class App extends React.Component {
         </Route>
         <Route path="/search-page">
           <SearchPage/>
+        </Route>
+        <Route path="/movie-details-page">
+          <MovieDetails />
         </Route>
       </Switch>
       <FooterComponent />

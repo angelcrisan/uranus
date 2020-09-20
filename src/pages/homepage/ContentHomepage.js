@@ -64,6 +64,9 @@ return (
                     containerClass = "card-Container"
                     textContainerClass ="card-text" 
                     cardTitleClass = "card-title"
+                    cardImdbratingClass = "card-imdbRating"
+                    imgSrcClass = "card-img"
+                    posterClass = "posters"
                     key={index} 
                     Title={element.Title} 
                     Poster={element.Poster} 
@@ -79,7 +82,9 @@ return (
                     containerClass = "card-Container"
                     textContainerClass ="card-text"
                     cardTitleClass = "card-title"
-
+                    cardImdbratingClass = "card-imdbRating"
+                    imgSrcClass = "card-img"
+                    posterClass = "posters"
                     key={index} 
                     Title={element.Title} 
                     Poster={element.Poster} 

@@ -31,9 +31,10 @@ checkIfLoggedIn =() => {
       .then((res) => res.json())
       .then((json) => {
         localStorage.removeItem("accessToken")
+        window.location.reload()
       }).catch(json => {
           if (json.message === "User logged out successfully" ) {
-              //refresh page or something :)
+                window.location.reload()
           }else {
               alert("Something bad happen when trying to Log you out, please retry!")
           }

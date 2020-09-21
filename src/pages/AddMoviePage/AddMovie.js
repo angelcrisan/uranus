@@ -5,7 +5,7 @@ export class AddMoviePage extends React.Component{
     state ={
         titleValue: "",
         yearValue: "",
-        imageUrlValue: "",
+        posterValue: "",
         releaseValue: "",
         runtimeValue: "",
         genreValue: "",
@@ -29,9 +29,9 @@ export class AddMoviePage extends React.Component{
     }
 
 
-    updateImageUrlValue = (event) => {
+    updatePosterValue = (event) => {
             this.setState({
-                imageUrlValue: event.target.value
+                posterValue: event.target.value
             })
         }
 
@@ -91,7 +91,7 @@ export class AddMoviePage extends React.Component{
       body: JSON.stringify({
         Title: this.state.titleValue,
         Year: this.state.yearValue,
-        ImageUrl: this.state.imageUrlValue,
+        Poster: this.state.posterValue,
         Released: this.state.releaseValue,
         Runtime: this.state.runtimeValue,
         Genre: this.state.genreValue,
@@ -104,6 +104,7 @@ export class AddMoviePage extends React.Component{
       .then((res) => res.json())
       .then((json) => {
         console.log(json);
+        window.location.reload();
       });
         }
 
@@ -135,7 +136,7 @@ export class AddMoviePage extends React.Component{
                 <h2>Add a movie</h2>
                 <p className="paragraph">Title: <input value={this.state.titleValue} onChange={this.updateTitleValue}></input></p>
                 <p>Year: <input value={this.state.yearValue} onChange={this.updateYearValue}></input></p>
-                <p>Image Url: <input value={this.state.imageUrlValue} onChange={this.updateImageUrlValue} onBlur={this.renderPoster}></input></p>
+                <p>Image Url: <input value={this.state.posterValue} onChange={this.updatePosterValue} onBlur={this.renderPoster}></input></p>
                 <p>Released: <input value={this.state.releasedValue} onChange={this.updateReleasedValue}></input></p>
                 <p>Runtime: <input value={this.state.runtimeValue} onChange={this.updateRuntimeValue}></input></p>
                 <p>Genre: <input value={this.state.genreValue} onChange={this.updateGenreValue}></input></p>

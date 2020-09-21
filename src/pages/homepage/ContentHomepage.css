@@ -28,6 +28,7 @@
     flex-wrap: wrap;
     width: 100%;
     margin: auto;
+    cursor: pointer;
 }
 
 .Best-Comedies-Text{

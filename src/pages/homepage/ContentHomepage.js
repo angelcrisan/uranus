@@ -12,28 +12,28 @@ state={
 
 getAllMovies = () =>{
  
-    if (localStorage.getItem("bestRatedMovies")) {
-        this.setState({
-            topRatedMovies: JSON.parse(localStorage.getItem("bestRatedMovies")),
-            bestComedies: JSON.parse(localStorage.getItem("bestComedies")),
-            bestDramas: JSON.parse(localStorage.getItem("bestDramas"))
-    }) 
-    } else{
+    if (false){//localStorage.getItem("bestRatedMovies")) {
+    //     this.setState({
+    //         topRatedMovies: JSON.parse(localStorage.getItem("bestRatedMovies")),
+    //         bestComedies: JSON.parse(localStorage.getItem("bestComedies")),
+    //         bestDramas: JSON.parse(localStorage.getItem("bestDramas"))
+    // }) }
+ } else{
         fetch("https://movies-app-siit.herokuapp.com/movies?take=9999999&skip=0")
         .then((response)=> response.json())
         .then((json)=>{
            
             this.setState({
             topRatedMovies: json.results
-                .filter(movie => movie.imdbRating >8.5)
+                .filter(movie => movie.imdbRating > 8.4)
                 .sort(function(firstMovie, NextMovie){
                  return NextMovie.imdbRating-firstMovie.imdbRating}),
             bestComedies: json.results
-                 .filter(movie => movie.imdbRating > 7.4 && movie.Genre.includes("Comedy"))
+                 .filter(movie => movie.imdbRating > 7.3 && movie.Genre.includes("Comedy"))
                  .sort(function(firstMovie, NextMovie){
                     return NextMovie.imdbRating-firstMovie.imdbRating}),
             bestDramas: json.results
-                 .filter(movie => movie.imdbRating > 8.0 && movie.Genre.includes("Drama"))
+                 .filter(movie => movie.imdbRating > 8.1 && movie.Genre.includes("Drama"))
                  .sort(function(firstMovie, NextMovie){
                     return NextMovie.imdbRating-firstMovie.imdbRating})
                    

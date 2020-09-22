@@ -8,7 +8,8 @@ state = {
     UserState:false,
     MovieInformation: {},
     EditButtonState: false,
-    MovieID: ""
+    MovieID: "",
+    redirect: false
 }
 
 getMovieInfo = (MovieID) =>{
@@ -45,6 +46,8 @@ handleDeleteButton = ()=>{
             .then((res) => res.json())
             .then((json) => {
               console.log(json);
+              localStorage.removeItem("bestRatedMovies");
+              window.location.reload();
             });
 }
 

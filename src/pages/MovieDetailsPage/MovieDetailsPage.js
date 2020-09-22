@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import './MovieDetailsPage.css';
 
 export class MovieDetails extends React.Component{
@@ -33,7 +34,19 @@ handleUserState = () => {
     }
 }
 
-handleDeleteButton = ()=>{}
+handleDeleteButton = ()=>{
+    fetch(`https://movies-app-siit.herokuapp.com/movies/${this.state.MovieID}`, {
+            method: "DELETE",
+            mode: "cors",
+            headers: {
+                "X-Auth-Token": localStorage.getItem("accessToken")
+                },
+          })
+            .then((res) => res.json())
+            .then((json) => {
+              console.log(json);
+            });
+}
 
 renderEditStateIfUserLoggedIn = ()=>{
         if (localStorage.getItem("accessToken")) { 
@@ -78,7 +91,9 @@ handleRenderingButtons = () => {
       return (
       <div>
       <button onClick={this.handleEditButton}>Edit</button>
+      <Link to="/">
       <button onClick={this.handleDeleteButton}>Delete</button>
+      </Link>
       </div>
       )
     } else{

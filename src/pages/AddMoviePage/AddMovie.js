@@ -1,5 +1,6 @@
 import React from 'react';
 import './AddMovie.css';
+import { Link } from 'react-router-dom';
 
 export class AddMoviePage extends React.Component{
     state ={
@@ -124,6 +125,10 @@ export class AddMoviePage extends React.Component{
            
         }
 
+handleCancelButton = () =>{
+    this.setState({UserState:false})
+}
+
     render(){
         return(
             <div className="add-a-movie-page">
@@ -145,7 +150,9 @@ export class AddMoviePage extends React.Component{
                 <p>Country: <input value={this.state.countryValue} onChange={this.updateCountryValue}></input></p>
                 <p>imdbRating: <input value={this.state.imdbRatingValue} onChange={this.updateimdbRatingValue}></input></p>
                 <button className="save-and-cancel-button" onClick={this.handleSaveButton}>Save</button>
-                <button className="save-and-cancel-button">Cancel</button>
+                <Link to="/all-movies-page">
+                <button className="save-and-cancel-button" onClick={this.handleCancelButton}>Cancel</button>
+                </Link>
             </div>
             
          </div>

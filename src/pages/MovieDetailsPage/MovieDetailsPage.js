@@ -124,7 +124,7 @@ handleRenderingButtons = () => {
                     <input className={(this.state.UserState ? " show" : ' hidden')}>
                         </input>
                 </p>
-                <p className={(this.state.UserState ? "show" : 'hidden')}>Poster: {(this.state.UserState ? "" : this.state.MovieInformation.Poster)}
+                <p className={`Poster ${(this.state.UserState ? "show" : 'hidden')}`}>Poster: {(this.state.UserState ? "" : this.state.MovieInformation.Poster)}
                     <input className={(this.state.UserState ? "show" : 'hidden')}>
                         </input>
                 </p>

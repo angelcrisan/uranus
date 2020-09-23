@@ -4,7 +4,6 @@ import {
   Switch,
   Route,
 } from "react-router-dom";
-
 import './App.css';
 import { LogInPage } from './pages/LogInPage/LogInPage';
 import { Homepage } from './pages/homepage/Homepage';
@@ -16,6 +15,7 @@ import { RegisterPage } from './pages/RegisterPage/RegisterPage';
 import { AddMoviePage } from './pages/AddMoviePage/AddMovie';
 import { SearchPage } from './pages/SearchPage/SearchPage';
 import { MovieDetails } from './pages/MovieDetailsPage/MovieDetailsPage';
+
 
 
 export class App extends React.Component {

@@ -39,11 +39,14 @@
 
 .movie-information-container input{
     margin: 10px;
-    
 }
 
 .single-card-container p{
     display: flex;
+
 }
 
+.movie-information-container{
+    margin-bottom: 170px;
+}
 

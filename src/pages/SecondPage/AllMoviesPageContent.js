@@ -29,7 +29,6 @@ getAllMovies = () => {
         fetch(this.state.URL)
             .then((response)=> response.json())
             .then((json)=>{
-                console.log(json)
                 this.setState({
                     allMovies: json.results,
                     NextPage: json.pagination.links.next,
@@ -41,25 +40,21 @@ getAllMovies = () => {
 }        
 
 handlePagination = (event) =>{
-    console.log(event.target.innerHTML); 
     if (event.target.innerHTML === 'Next'){
         fetch(this.state.NextPage)
     .then((response)=> response.json())
     .then((json)=>{
-        console.log(json)
         this.setState({
             allMovies: json.results,
             NextPage: json.pagination.links.next,
             PrevPage: json.pagination.links.prev,
             CurrentPage: json.pagination.currentPage
-             })
-             console.log(json.pagination.links.next)     
+             }) 
     })
 } else{
     fetch(this.state.PrevPage)
     .then((response)=> response.json())
     .then((json)=>{
-        console.log(json)
         this.setState({
             allMovies: json.results,
             NextPage: json.pagination.links.next,
@@ -76,7 +71,7 @@ componentDidMount() {
      }  
 
    render() {
-    console.log(this.state.allMovies[0]); 
+ 
        return (
         <div className="all-movies-page">
             

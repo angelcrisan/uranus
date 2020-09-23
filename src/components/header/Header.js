@@ -68,10 +68,6 @@ checkIfLoggedIn =() => {
             <p>Menu</p>
 
         </div>
-        <div className="Simple-Search">
-            <img src={search} alt="search" className="Search-icon"></img>
-            <input className="Search-Input" ></input>
-        </div>
         <div className="Register-container">
            {this.checkIfLoggedIn()}
         </div>

@@ -104,7 +104,6 @@ export class AddMoviePage extends React.Component{
     })
       .then((res) => res.json())
       .then((json) => {
-        console.log(json);
         window.location.reload();
       });
         }

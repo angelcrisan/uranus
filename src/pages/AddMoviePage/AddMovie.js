@@ -125,9 +125,9 @@ export class AddMoviePage extends React.Component{
            
         }
 
-handleCancelButton = () =>{
-    this.setState({UserState:false})
-}
+        handleCancelButton= () => {
+            this.setState({UserState:false})
+        }
 
     render(){
         return(

@@ -106,3 +106,28 @@
 .Search-Input {
     background-color: #FEFEDF;
 }
+
+@media screen and (max-width:400px) {
+    .header-container{
+        width: 100%;
+        display: inline-flex;
+
+    }
+    .menuText {
+        font-size: 10px;
+        padding-top: 3px;
+    }
+    
+    .dropdown {
+        height:20px;
+        width: 20px;
+        padding: 2px 0 0 0 ;
+    }
+    .Burger-Button {
+        height: 15px;
+        width:15px;
+    }
+    .Register-Button {
+        height: 10px;
+    }
+}

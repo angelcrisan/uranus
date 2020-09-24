@@ -81,6 +81,7 @@ componentDidMount(){
     const [search, id] = this.props.location.search.split("=");
     this.setState({MovieID: id})
     this.getMovieInfo(id)
+   
 }
 
 handleUserState = () => {
@@ -89,6 +90,7 @@ handleUserState = () => {
             UserState: true
         })
     }
+    
 }
 
 handleDeleteButton = ()=>{
@@ -146,11 +148,10 @@ handleSaveButton = () => {
     })
       .then((res) => res.json())
       .then((json) => {
-          console.log(json);
+          window.location.reload()
       });
-
-      window.location.reload()
 }
+
 
 handleRenderingButtons = () => {
     if(!this.state.EditButtonState){
@@ -165,7 +166,7 @@ handleRenderingButtons = () => {
     } else{
        return (
        <div>
-       <button onClick={this.handleSaveButton}>Save</button>
+       <button onClick={this.handleSaveButton} >Save</button>
        <button onClick={this.handleCancelButton}>Cancel</button>
        </div>
        )

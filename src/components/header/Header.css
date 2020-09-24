@@ -130,4 +130,27 @@
     .Register-Button {
         height: 10px;
     }
+    .Register-container a{
+        font-size: 7px;
+    }
+}
+
+@media screen and (min-width:401px) and (max-width:800px){
+    .header-container{
+        width: 100%;
+        display: inline-flex;
+    }
+    .menuText{
+        font-size: 15px;
+        padding-top: 0px;
+    }
+    .dropdown{
+        height: 40px;
+        width: 40px;
+        padding: 3px 0 0 0 ;
+    }
+    .Burger-Button{
+        height: 30px;
+        width: 30px;
+    }
 }

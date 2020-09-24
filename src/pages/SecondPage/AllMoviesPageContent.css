@@ -12,7 +12,7 @@
 
 .pagination-container{
     position: absolute;
-    margin-top: 700px;
+    margin-top: 750px;
     margin-bottom: 130px;
     display: flex;
     margin-left: 600px;
@@ -30,7 +30,7 @@
 
 .allMovies-card-title,
 .allMovies-card-imdbRating{
-    font-size: 15px;
+    font-size: 11px;
     cursor: pointer;
 }
 

@@ -126,8 +126,7 @@ handleCancelButton = () =>{
 }
 
 handleSaveButton = () => {
-    let httpBody = this.state;
-    let MovieID = httpBody.MovieID;
+    let httpBody = {...this.state};
     for (const key in httpBody) {
        if (httpBody[key] === "" || key === "UserState" || key === "redirect" ||
         key === "MovieInformation" || key === "EditButtonState" || key === "MovieID"
@@ -135,7 +134,7 @@ handleSaveButton = () => {
         delete httpBody[key]
        }
    }
-    fetch(`https://movies-app-siit.herokuapp.com/movies/${MovieID}`, {
+    fetch(`https://movies-app-siit.herokuapp.com/movies/${this.state.MovieID}`, {
       method: "PUT",
       mode: "cors",
       headers: {
@@ -143,7 +142,7 @@ handleSaveButton = () => {
         "Content-Type": "application/json",
         "X-Auth-Token": localStorage.getItem("accessToken"),
       },
-      body: JSON.stringify({httpBody}),
+      body: JSON.stringify(httpBody),
     })
       .then((res) => res.json())
       .then((json) => {

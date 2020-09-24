@@ -28,3 +28,24 @@
     }
 }
 
+@media screen and (min-width:401px) and (max-width:800px) {
+
+    .Logo-container{
+        height: 100%;
+        width: 110px;
+    }
+
+    .Logo-Pic{
+        height: 30px;
+        width: 30px;
+        margin-left: 20px;
+    }
+
+    .Logo-Text{
+        height: 15px;
+        width:80px;
+        font-size: 9px;
+        margin: 0 0 0 10px;
+        
+    }
+} 

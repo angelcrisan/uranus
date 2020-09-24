@@ -65,7 +65,7 @@ checkIfLoggedIn =() => {
                 </Link>
             </div>
             
-            <p>Menu</p>
+            <p className="menuText">Menu</p>
 
         </div>
         <div className="Register-container">

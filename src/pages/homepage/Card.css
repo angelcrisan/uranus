@@ -29,3 +29,11 @@
     margin: 30px;
     
 }
+
+@media screen and (max-width:400px) {
+    .card-img{
+        height: 100px;
+        width: 40px;
+        margin:10px;
+    }
+}

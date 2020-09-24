@@ -30,7 +30,7 @@
 
 .allMovies-card-title,
 .allMovies-card-imdbRating{
-    font-size: 10px;
+    font-size: 15px;
     cursor: pointer;
 }
 
@@ -51,3 +51,16 @@
 }
 
 
+@media screen and (max-width:400px) {
+    .allMovies-card-title, .allMovies-card-imdbRating{
+        font-size: 7px;
+        font-weight: bold;
+    }
+    .card-img{
+        width:100px;
+
+    }
+    .allMovies-container{
+        margin:0;
+    }
+}
